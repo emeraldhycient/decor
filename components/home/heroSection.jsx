@@ -18,7 +18,7 @@ function HeroSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-12">
           <div className="w-fit md:w-10/12">
             <div>
-              <h1 className="text-5xl md:text-6xl font-extrabold md:font-extrabold  text-white mt-2 tracking-wide leading-normal md:leading-none">
+              <h1 className="text-5xl md:text-6xl font-extrabold md:font-extrabold  text-white mt-2 tracking-wide leading-snug md:leading-none">
                 Create a home that defines who you are
               </h1>
             </div>
