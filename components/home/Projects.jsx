@@ -10,7 +10,7 @@ function Projects({ projects }) {
   );
   return (
     <section id="Portfolio" className="h-fit">
-      <div className="w-screen m-2 md:mx-auto md:w-10/12">
+      <div className="w-[98vw] mx-auto md:w-10/12">
         <div className="flex flex-col md:flex-row justify-between items-center  ">
           <div className="text-left">
             <h1 className="text-3xl md:text-4xl font-black  text-slate-800 mt-2 tracking-wide leading-normal md:leading-tight">
