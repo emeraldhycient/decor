@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import StartportBtn from "./startportBtn";
 
 function HeroSection() {
   return (
@@ -24,14 +25,7 @@ function HeroSection() {
               Do i have permission to record this meeting gain traction, root-
               and- branch review.
             </h6>
-            <div className="flex justify-between  items-center mt-4 md:mt-6">
-              <button className="bg-amber-500 text-white px-3 py-2 rounded">
-                Get Started
-              </button>
-              <button className="border-[.01rem] border-gray-500 px-3 py-2 rounded text-gray-50">
-                See Our Portfolio
-              </button>
-            </div>
+            <StartportBtn color="text-gray-50" />
             <div className="flex justify-between  items-center mt-4 md:mt-6">
               <div className="w-24">
                 <h3 className="text-amber-500 text-lg font-bold">100+</h3>
