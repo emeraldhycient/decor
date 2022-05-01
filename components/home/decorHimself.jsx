@@ -5,7 +5,7 @@ function DecorHimself() {
   return (
     <section
       id="hero"
-      className="h-fit md:h-[92vh] "
+      className="h-fit md:h-[92vh] pb-4"
       style={{
         background:
           "linear-gradient(60deg, #ffffff, #b9c7c1, #789287, #396051)",
@@ -13,7 +13,7 @@ function DecorHimself() {
     >
       <div className="w-fit mx-5 md:mx-auto md:w-10/12 ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="h-96 md:h-[94vh] order-last md:order-first">
+          <div className="h-92 md:h-[94vh] order-last md:order-first">
             <Image
               src="/images/decor-himself.jpeg"
               width={630}
@@ -37,6 +37,9 @@ function DecorHimself() {
                 interest in the company while retaining the retail
                 operations.[4] The company grew through acquisitions and
                 expansions in the late 19th and early 20th century.
+              </p>
+              <p className="text-sm font-normal text-white italic mt-4">
+                Founder: Mpdesigns
               </p>
             </div>
           </div>
