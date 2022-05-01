@@ -12,6 +12,7 @@ function OfferSection() {
 
   return (
     <section
+      id="offerSection"
       className="h-fit md:h-[92vh] pb-4"
       style={{
         backgroundImage: `url(/images/sun.png)`,
@@ -38,7 +39,10 @@ function OfferSection() {
                 The latest interior trend making its way around video sharing
                 app TikTok? Anything coastal grandmother, an aesthetic coined by
               </p>
-              <StartportBtn color="text-gray-300" />
+              <StartportBtn
+                color="text-gray-300"
+                nextsection="whatwesellSection"
+              />
             </div>
           </div>
         </div>

@@ -31,7 +31,7 @@ function CarouselTing({ images }) {
           </Slide>
         ))}
       </Slider>
-      <ButtonBack className="bg-white border-[.012rem] border-[#396051] rounded-sm px-5 py-2 mx-3 mt-4">
+      <ButtonBack className="bg-white border-[.012rem] border-[#396051] rounded-sm px-5 py-2 mx-3 mt-4 hover:scale-75	">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6"
@@ -47,7 +47,7 @@ function CarouselTing({ images }) {
           />
         </svg>{" "}
       </ButtonBack>
-      <ButtonNext className="bg-white border-[.012rem] border-[#396051] rounded-sm px-5 py-2 mt-4">
+      <ButtonNext className="bg-white border-[.012rem] border-[#396051] rounded-sm px-5 py-2 mt-4 hover:scale-90">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6"

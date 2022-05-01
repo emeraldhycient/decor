@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import CarouselTing from "../carouselTing";
+import ScrollIntoView from "react-scroll-into-view";
 
 function WhatwesellSection() {
   const [images, setimages] = useState([
-    { id: 23, src: "/images/apart3.png" },
-    { id: 56, src: "/images/apart4.png" },
-    { id: 34, src: "/images/apart1.png" },
     { id: 45, src: "/images/apart2.png" },
+    { id: 56, src: "/images/apart4.png" },
+    { id: 23, src: "/images/apart3.png" },
+    { id: 34, src: "/images/apart1.png" },
   ]);
 
   return (
@@ -112,9 +113,11 @@ function WhatwesellSection() {
                   </h5>
                 </div>
               </div>
-              <button className="bg-amber-500 text-slate-600 mt-6 px-3 py-2 rounded-sm">
-                Discover More
-              </button>
+              <ScrollIntoView selector="#Portfolio">
+                <button className="bg-amber-500 text-slate-600 mt-6 px-3 py-2 rounded-sm">
+                  Discover More
+                </button>
+              </ScrollIntoView>
             </div>
           </div>
           <div className="w-full h-fit md:h-[80vh]  md:order-last pt-12	">

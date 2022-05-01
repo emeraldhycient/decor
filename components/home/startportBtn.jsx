@@ -1,14 +1,20 @@
-function StartportBtn({ color }) {
+import ScrollIntoView from "react-scroll-into-view";
+
+function StartportBtn({ color, nextsection }) {
   return (
     <div className="flex justify-between  items-center mt-4 md:mt-6">
-      <button className="bg-amber-500 text-white px-3 py-2 rounded-sm">
-        Get Started
-      </button>
-      <button
-        className={`border-[.01rem] border-gray-500 px-3 py-2 rounded-sm ${color} `}
-      >
-        See Our Portfolio
-      </button>
+      <ScrollIntoView selector={`#${nextsection}`}>
+        <button className="bg-amber-500 text-white  px-3 py-2 rounded-sm  hover:bg-white hover:text-amber-500 hover:border-[.01rem] hover:border-amber-500">
+          Get Started
+        </button>
+      </ScrollIntoView>
+      <ScrollIntoView selector="#Portfolio">
+        <button
+          className={`border-[.01rem] border-gray-500 px-3 py-2 rounded-sm ${color} hover:bg-amber-500 hover:text-white`}
+        >
+          See Our Portfolio
+        </button>
+      </ScrollIntoView>
     </div>
   );
 }

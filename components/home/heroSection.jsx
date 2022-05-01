@@ -5,6 +5,7 @@ import StartportBtn from "./startportBtn";
 function HeroSection() {
   return (
     <section
+      id="hero"
       className="h-fit md:h-[92vh]"
       style={{
         backgroundImage: `url(/images/decor2.svg)`,
@@ -25,7 +26,7 @@ function HeroSection() {
               Do i have permission to record this meeting gain traction, root-
               and- branch review.
             </h6>
-            <StartportBtn color="text-gray-50" />
+            <StartportBtn color="text-gray-50" nextsection="offerSection" />
             <div className="flex justify-between  items-center mt-4 md:mt-6">
               <div className="w-24">
                 <h3 className="text-amber-500 text-lg font-bold">100+</h3>

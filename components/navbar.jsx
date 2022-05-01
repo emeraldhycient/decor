@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <nav className="bg-[#396051] h-[4rem] w-screen sticky top-0 backdrop-blur	">
+    <nav className="bg-[#396051] h-[4rem] w-screen sticky top-0 backdrop-blur	z-20">
       <div className="flex justify-between  items-center w-full md:w-10/12 md:mx-auto">
         <div className="mt-3 ml-4">
           <Link href="/">
