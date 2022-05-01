@@ -3,6 +3,7 @@ import Navbar from "../components/navbar";
 import Layout from "../components/layout";
 import HeroSection from "../components/home/heroSection";
 import OfferSection from "../components/home/offerSection";
+import WhatwesellSection from "../components/home/whatwesellSection";
 
 export default function Home() {
   return (
@@ -13,6 +14,9 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <OfferSection />
+      <div className="mt-10">
+        <WhatwesellSection />
+      </div>
       <Footer />
     </Layout>
   );
