@@ -24,7 +24,7 @@ function DecorHimself() {
           <div className="pt-20">
             <div className="h-fit md:h-96 bg-[#396051] mt-10 text-left p-5">
               <h1 className="text-2xl md:text-3xl font-extrabold  text-white mt-2 tracking-wide leading-normal md:leading-tight">
-                Molly Pealer
+                Mpdesigns
               </h1>
               <p className="text-white text-base mt-4">
                 Molly Pealer dates from 1966, when Cleveland bookkeeper Molly
@@ -36,10 +36,10 @@ function DecorHimself() {
                 in Ohio on July 16, 1984, two years after Osborn sold his
                 interest in the company while retaining the retail
                 operations.[4] The company grew through acquisitions and
-                expansions in the late 19th and early 20th century.
+                expansions in the late 20th and early 21th century.
               </p>
               <p className="text-sm font-normal text-white italic mt-4">
-                Founder: Mpdesigns
+                Founder: Molly Pealer
               </p>
             </div>
           </div>
