@@ -28,11 +28,7 @@ function Navbar() {
               <a className="text-white  text-base">Home</a>
             </Link>
           </li>
-          <li>
-            <Link href="/services">
-              <a className="text-white  text-base">Services</a>
-            </Link>
-          </li>
+
           <li>
             <Link href="/contact">
               <a className="text-white  text-base">Contact</a>
@@ -41,6 +37,11 @@ function Navbar() {
           <li>
             <Link href="/portfolio">
               <a className="text-white  text-base">Portfolio</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/login">
+              <a className="text-white  text-base">Login</a>
             </Link>
           </li>
         </ul>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Project from "../project";
 
 function Projects({ projects }) {
@@ -11,11 +12,13 @@ function Projects({ projects }) {
               <br /> Design Projects.
             </h1>
           </div>
-          <button
-            className={`mt-8 md:mt-1 border-[.01rem] border-amber-500 px-3 py-2 rounded-sm text-amber-500 hover:bg-amber-500 hover:text-white`}
-          >
-            See Our Portfolio
-          </button>
+          <Link href="/portfolio" passHref>
+            <button
+              className={`mt-8 md:mt-1 border-[.01rem] border-amber-500 px-3 py-2 rounded-sm text-amber-500 hover:bg-amber-500 hover:text-white`}
+            >
+              See Our Portfolio
+            </button>
+          </Link>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 pt-12">
           {projects.map((project) => (
