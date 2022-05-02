@@ -22,28 +22,6 @@ function Navbar() {
             </div>
           </Link>
         </div>
-        <ul className="hidden md:flex  md:w-3/12 text-white  justify-between items-center">
-          <li>
-            <Link href="/">
-              <a className="text-white  text-base">Home</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/services">
-              <a className="text-white  text-base">Services</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact">
-              <a className="text-white  text-base">Contact</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/portfolio">
-              <a className="text-white  text-base">Portfolio</a>
-            </Link>
-          </li>
-        </ul>
       </div>
     </nav>
   );

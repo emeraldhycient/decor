@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 function Project({ link, image }) {
@@ -10,7 +9,7 @@ function Project({ link, image }) {
 
   return (
     <div
-      className="h-96 bg-gray-300"
+      className="h-56 md:h-80 bg-gray-300"
       style={{
         backgroundImage: `url(${image})`,
         backgroundSize: "cover",
