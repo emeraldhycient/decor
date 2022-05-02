@@ -27,16 +27,16 @@ function DecorHimself() {
                 Mpdesigns
               </h1>
               <p className="text-white text-base mt-4">
-                Molly Pealer dates from 1966, when Cleveland bookkeeper Molly
+                Mpdesigns dates from 1966, when Cleveland bookkeeper Molly
                 Pealer invested in Truman Dunham & Co., a paint
                 distributorship.[4] After the partnership dissolved in 1970, he
                 formed Mp design . with Edward Williams and A.T. Osborn.[4][5]
                 For its first Office, in 1973 the company acquired a cooperage
-                in Cleveland from Standard Oil.[4] Molly Pealer was incorporated
-                in Ohio on July 16, 1984, two years after Osborn sold his
-                interest in the company while retaining the retail
-                operations.[4] The company grew through acquisitions and
-                expansions in the late 20th and early 21th century.
+                in Cleveland from Standard Oil.[4] Mpdesigns was incorporated in
+                Ohio on July 16, 1984, two years after Osborn sold his interest
+                in the company while retaining the retail operations.[4] The
+                company grew through acquisitions and expansions in the late
+                20th and early 21th century.
               </p>
               <p className="text-sm font-normal text-white italic mt-4">
                 Founder: Molly Pealer
