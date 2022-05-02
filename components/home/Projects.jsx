@@ -1,13 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import Project from "../project";
 
 function Projects({ projects }) {
-  const Btn = (link) => (
-    <button className="bg-amber-500 text-white mt-6 px-3 py-2 rounded-sm  hover:bg-white hover:text-amber-500 hover:border-[.01rem] hover:border-amber-500 scale-90 hover:scale-75">
-      <Link href={`${link}`}> View Project</Link>
-    </button>
-  );
   return (
     <section id="Portfolio" className="h-fit">
       <div className="w-[98vw] mx-auto md:w-10/12">
@@ -26,18 +19,7 @@ function Projects({ projects }) {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 pt-12">
           {projects.map((project) => (
-            <div
-              key={project.id}
-              className="h-96 bg-gray-300"
-              style={{
-                backgroundImage: `url(${project.src})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-            >
-              <Btn link={`${project.link}`} />
-            </div>
+            <Project key={project.id} link={project.link} image={project.src} />
           ))}
         </div>
       </div>

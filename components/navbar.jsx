@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ScrollIntoView from "react-scroll-into-view";
 
 function Navbar() {
   return (
@@ -38,9 +39,9 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/blogs">
-              <a className="text-white  text-base">Blogs</a>
-            </Link>
+            <ScrollIntoView selector="#Portfolio">
+              <a className="text-white  text-base">Portfolio</a>
+            </ScrollIntoView>
           </li>
         </ul>
       </div>

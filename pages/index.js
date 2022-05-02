@@ -10,14 +10,14 @@ import DecorHimself from "../components/home/decorHimself";
 
 export default function Home() {
   const [projects, setprojects] = useState([
-    { id: 45, link: "/", src: "/images/apart2.png" },
-    { id: 56, link: "/", src: "/images/apart4.png" },
-    { id: 23, link: "/", src: "/images/apart3.png" },
-    { id: 34, link: "/", src: "/images/apart1.png" },
-    { id: 21, link: "/", src: "/images/apart2.png" },
-    { id: 2, link: "/", src: "/images/apart4.png" },
-    { id: 40, link: "/", src: "/images/apart3.png" },
-    { id: 25, link: "/", src: "/images/apart1.png" },
+    { id: 45, link: "/portfolio/port1", src: "/images/apart2.png" },
+    { id: 56, link: "/portfolio/port2", src: "/images/apart4.png" },
+    { id: 23, link: "/portfolio/port3", src: "/images/apart3.png" },
+    { id: 34, link: "/portfolio/port4", src: "/images/apart1.png" },
+    { id: 21, link: "/portfolio/port5", src: "/images/apart2.png" },
+    { id: 2, link: "/portfolio/port6", src: "/images/apart4.png" },
+    { id: 40, link: "/portfolio/port7", src: "/images/apart3.png" },
+    { id: 25, link: "/portfolio/port8", src: "/images/apart1.png" },
   ]);
   return (
     <Layout
