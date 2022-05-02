@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CarouselTing from "../carouselTing";
-import ScrollIntoView from "react-scroll-into-view";
+import Link from "next/link";
 
 function WhatwesellSection() {
   const [images, setimages] = useState([
@@ -113,11 +113,11 @@ function WhatwesellSection() {
                   </h5>
                 </div>
               </div>
-              <ScrollIntoView selector="#Portfolio">
+              <Link href="/portfolio" passHref>
                 <button className="bg-amber-500 text-slate-600 mt-6 px-3 py-2 rounded-sm">
                   Discover More
                 </button>
-              </ScrollIntoView>
+              </Link>
             </div>
           </div>
           <div className="w-full h-fit md:h-[80vh]  md:order-last pt-12	">

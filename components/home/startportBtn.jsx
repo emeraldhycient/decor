@@ -1,4 +1,5 @@
 import ScrollIntoView from "react-scroll-into-view";
+import Link from "next/link";
 
 function StartportBtn({ color, nextsection }) {
   return (
@@ -8,13 +9,13 @@ function StartportBtn({ color, nextsection }) {
           Get Started
         </button>
       </ScrollIntoView>
-      <ScrollIntoView selector="#Portfolio">
+      <Link href="/portfolio" passHref>
         <button
           className={`border-[.01rem] border-gray-500 px-3 py-2 rounded-sm ${color} hover:bg-amber-500 hover:text-white`}
         >
           See Our Portfolio
         </button>
-      </ScrollIntoView>
+      </Link>
     </div>
   );
 }
