@@ -1,12 +1,38 @@
 import { useState } from "react";
+import axios from "axios";
 import Navbar from "../components/dashboard/navbar";
 import Layout from "../components/layout";
 
+import { useRouter } from "next/router";
+
 function Login() {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
+
+  const submitlogin = (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    axios
+      .post(`${process.env.NEXT_PUBLIC_apiUrl}login`, {
+        email,
+        password,
+      })
+      .then((response) => {
+        sessionStorage.setItem("token", response.data.token);
+        sessionStorage.setItem("user", response.data.user);
+        router.push("/dashboard");
+      })
+      .catch((error) => {
+        console.log(error.response.data.message);
+        setError(error.response.data.message);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
 
   return (
     <Layout>
@@ -15,39 +41,7 @@ function Login() {
         <h1 className="text-lg text-center font-bold text-blue-300 mt-2 mb-4">
           Login
         </h1>
-        <form
-          onSubmit={async (e) => {
-            e.preventDefault();
-            setIsLoading(true);
-            setError("");
-            try {
-              const res = await fetch(
-                `${process.env.API_URL}/api/v1/projects/${slug}`,
-                {
-                  method: "PUT",
-                  headers: {
-                    "Content-Type": "application/json",
-                    "X-CSRFToken": process.env.CSRF_TOKEN,
-                  },
-                  body: JSON.stringify({
-                    title,
-                    description,
-                    image,
-                    project_status,
-                    project_date,
-                  }),
-                }
-              );
-              const resData = await res.json();
-              console.log(resData);
-              setIsLoading(false);
-              router.push("/dashboard/projects");
-            } catch (err) {
-              setError("Something went wrong");
-              setIsLoading(false);
-            }
-          }}
-        >
+        <form onSubmit={submitlogin}>
           <div className="mb-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
@@ -62,6 +56,7 @@ function Login() {
               placeholder="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
           <div className="mb-4">
@@ -74,10 +69,11 @@ function Login() {
             <input
               className=" appearance-none border rounded-sm w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:-outline"
               id="password"
-              type="text"
+              type="password"
               placeholder="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
           </div>
 
