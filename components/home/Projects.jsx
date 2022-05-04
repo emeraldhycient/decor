@@ -3,8 +3,8 @@ import Link from "next/link";
 import axios from "axios";
 import Project from "../project";
 
-function Projects() {
-  const [projects, setprojects] = useState([]);
+function Projects({ projects }) {
+  /* const [projects, setprojects] = useState([]);
 
   useEffect(function () {
     axios
@@ -17,6 +17,8 @@ function Projects() {
         console.log(error);
       });
   }, []);
+
+  */
 
   return (
     <section id="Portfolio" className="h-fit">
@@ -37,28 +39,21 @@ function Projects() {
           </Link>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 pt-12">
-          {projects.map((project) => (
-            <Project
-              key={project.id}
-              slug={project.slug}
-              image={project.images}
-            />
-          ))}
+          {projects.length > 0 ? (
+            projects.map((project) => (
+              <Project
+                key={project.id}
+                slug={project.slug}
+                image={project.images}
+              />
+            ))
+          ) : (
+            <h1>No projects Found</h1>
+          )}
         </div>
       </div>
     </section>
   );
 }
 
-/*export async function getServerSideProps(context) {
-  const projects = await axios.get(`http://127.0.0.1:8000/api/projects/all`);
-
-  console.log(projects);
-
-  return {
-    props: {
-      projects: projects.data.Projects,
-    }, // will be passed to the page component as props
-  };
-}*/
 export default Projects;

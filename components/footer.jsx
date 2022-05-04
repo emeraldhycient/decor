@@ -23,7 +23,7 @@ function Footer() {
               id=""
               className="w-full h-12 border-none"
             />
-            <button className="bg-amber-500 h-12 text-white px-3 py-2 rounded-sm">
+            <button className="bg-amber-500 h-12 text-white px-3 py-2">
               Subscribe
             </button>
           </form>

@@ -6,9 +6,9 @@ import Project from "../../components/dashboard/project";
 import Layout from "../../components/layout";
 import WithAuth from "../../Hoc/withAuth";
 
-function Index() {
+function Index({ projects }) {
   const [status, setstatus] = useState("all");
-  const [projects, setprojects] = useState([]);
+  /*const [projects, setprojects] = useState([]);
 
   useEffect(
     function () {
@@ -23,6 +23,8 @@ function Index() {
     },
     [status]
   );
+
+  */
 
   return (
     <WithAuth>
@@ -75,6 +77,15 @@ function Index() {
       </Layout>
     </WithAuth>
   );
+}
+
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const data = await axios.get(`http://127.0.0.1:8000/api/projects/all`);
+  const projects = data.data.projects;
+
+  // Pass data to the page via props
+  return { props: { projects } };
 }
 
 export default Index;

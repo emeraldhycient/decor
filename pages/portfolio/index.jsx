@@ -6,11 +6,13 @@ import Navbar from "../../components/navbar";
 import Project from "../../components/portfolio/project";
 import Layout from "../../components/layout";
 
-function Index() {
+function Index({ projects }) {
   const [status, setstatus] = useState("all");
-  const [projects, setprojects] = useState([]);
 
-  useEffect(
+  //console.log(projects);
+  //const [projects, setprojects] = useState([]);
+
+  /* useEffect(
     function () {
       axios
         .get(`${process.env.NEXT_PUBLIC_apiUrl}projects/${status}`)
@@ -23,7 +25,7 @@ function Index() {
         });
     },
     [status]
-  );
+  );*/
 
   return (
     <Layout>
@@ -51,6 +53,15 @@ function Index() {
       </div>
     </Layout>
   );
+}
+
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const data = await axios.get(`http://127.0.0.1:8000/api/projects/all`);
+  const projects = data.data.projects;
+
+  // Pass data to the page via props
+  return { props: { projects } };
 }
 
 export default Index;

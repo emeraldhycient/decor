@@ -6,8 +6,8 @@ import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import CarouselTing from "../../components/carouselTing";
 
-function Project() {
-  const router = useRouter();
+function Project({ project }) {
+  /*const router = useRouter();
   const slug = router.query.slug;
 
   const [project, setproject] = useState([]);
@@ -30,6 +30,7 @@ function Project() {
     },
     [slug]
   );
+  */
   return (
     <Layout>
       <Navbar />
@@ -54,6 +55,16 @@ function Project() {
       <Footer />
     </Layout>
   );
+}
+
+export async function getServerSideProps({ params }) {
+  // Fetch data from external API
+  const { slug } = params;
+  const data = await axios.get(`http://127.0.0.1:8000/api/project/${slug}`);
+  const project = data.data.project;
+
+  // Pass data to the page via props
+  return { props: { project } };
 }
 
 export default Project;
