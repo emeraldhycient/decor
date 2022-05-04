@@ -68,7 +68,7 @@ function Index() {
             ))
           ) : (
             <div className="mt-10">
-              <h1>nothing found</h1>
+              <h1>nothing found at the moment</h1>
             </div>
           )}
         </div>
