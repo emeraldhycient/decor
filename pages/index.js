@@ -7,6 +7,7 @@ import OfferSection from "../components/home/offerSection";
 import WhatwesellSection from "../components/home/whatwesellSection";
 import Projects from "../components/home/Projects";
 import DecorHimself from "../components/home/decorHimself";
+import Schedule from "../components/home/schedule";
 
 export default function Home() {
   const [projects, setprojects] = useState([
@@ -35,6 +36,9 @@ export default function Home() {
       </div>
       <div className="mt-20">
         <DecorHimself />
+      </div>
+      <div className="mt-20">
+        <Schedule />
       </div>
       <Footer />
     </Layout>
