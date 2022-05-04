@@ -5,7 +5,7 @@ function Footer() {
   const d = new Date();
   const year = d.getFullYear();
   return (
-    <div className=" h-[100vh] mt-20">
+    <div className="h-fit md:h-[100vh] mt-20">
       <div className="h-fit md:h-3/6 w-full bg-gray-200 pt-16 md:pt-10 pb-8 ">
         <div className="md:w-3/5 mx-3	md:mx-auto text-center">
           <h1 className="text-4xl font-medium text-gray-500">
