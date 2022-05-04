@@ -29,7 +29,7 @@ function Footer() {
           </form>
         </div>
       </div>
-      <div className="h-3/6 bg-[#396051] pt-8">
+      <div className="h-fit md:h-3/6 bg-[#396051] pt-8">
         <div className="md:w-6/12 grid grid-cols-2 md:grid-cols-3 gap-4  mx-auto mt-4 flex justify-between items-center">
           <div className="flex justify-between flex-col items-center order-last md:order-first">
             <div className="bg-green-700 h-8 w-8 rounded-full flex justify-center items-center">
@@ -44,7 +44,7 @@ function Footer() {
               <i className="fa fa-envelope-o text-white fa-lg"></i>
             </div>
             <h6 className="text-gray-200 mt-3 text-center">
-              Admin@mpdesign.com
+              Admin@mpdesign.org
             </h6>
           </div>
           <div className="flex justify-between flex-col items-center">

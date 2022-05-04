@@ -37,7 +37,7 @@ function Schedule() {
             <a href="tel:+16282191324">+1 628-219-1324</a>
           </h6>
           <h6 className="text-xl font-normal text-gray-500 mt-3">
-            <a href="mailto:admin@mpdesign.com">admin@mpdesign.com</a>
+            <a href="mailto:admin@mpdesign.org">admin@mpdesign.org</a>
           </h6>
           <div
             className="bg-gray-200 w-56 h-56 rounded-full mt-8"
