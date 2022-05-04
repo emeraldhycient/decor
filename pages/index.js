@@ -32,7 +32,7 @@ export default function Home() {
         <WhatwesellSection />
       </div>
       <div className="mt-10">
-        <Projects projects={projects} />
+        <Projects />
       </div>
       <div className="mt-20">
         <DecorHimself />

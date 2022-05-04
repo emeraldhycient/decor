@@ -1,7 +1,23 @@
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import axios from "axios";
 import Project from "../project";
 
-function Projects({ projects }) {
+function Projects() {
+  const [projects, setprojects] = useState([]);
+
+  useEffect(function () {
+    axios
+      .get(`${process.env.NEXT_PUBLIC_apiUrl}projects/all`)
+      .then(function (response) {
+        setprojects(response.data.projects);
+      })
+      .catch(function (error) {
+        alert(error.response.data.message);
+        console.log(error);
+      });
+  }, []);
+
   return (
     <section id="Portfolio" className="h-fit">
       <div className="w-[98vw] mx-auto md:w-10/12">
@@ -22,7 +38,11 @@ function Projects({ projects }) {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 pt-12">
           {projects.map((project) => (
-            <Project key={project.id} link={project.link} image={project.src} />
+            <Project
+              key={project.id}
+              slug={project.slug}
+              image={project.images}
+            />
           ))}
         </div>
       </div>
@@ -30,4 +50,15 @@ function Projects({ projects }) {
   );
 }
 
+/*export async function getServerSideProps(context) {
+  const projects = await axios.get(`http://127.0.0.1:8000/api/projects/all`);
+
+  console.log(projects);
+
+  return {
+    props: {
+      projects: projects.data.Projects,
+    }, // will be passed to the page component as props
+  };
+}*/
 export default Projects;

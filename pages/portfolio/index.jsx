@@ -18,6 +18,7 @@ function Index() {
           setprojects(response.data.projects);
         })
         .catch(function (error) {
+          alert(error.response.data.message);
           console.log(error);
         });
     },
